@@ -52,7 +52,7 @@ public:
      * object stored in the static field.
      */
 
-    static Singleton *GetInstance(const std::string& value);
+    static Singleton *GetInstance(const std::string &value);
     void SomeBusinessLogic();
 
     std::string value() const;
