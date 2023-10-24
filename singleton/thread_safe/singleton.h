@@ -7,7 +7,7 @@ class Singleton{
 
 protected:
     static Singleton* pinstance_;
-    std::mutex mutex_;
+    static std::mutex mutex_;
 
 private:
 
