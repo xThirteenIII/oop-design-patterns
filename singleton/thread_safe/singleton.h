@@ -16,6 +16,7 @@ private:
 
     // Destructor
     ~Singleton();
+
     std::string value_;
 
 public:
@@ -27,7 +28,7 @@ public:
     static Singleton* GetInstance(const std::string &value);
 
     void SomeBusinessLogic();
-    std::string value();
+    std::string value() const;
 };
 
 #endif

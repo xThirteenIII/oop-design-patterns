@@ -1,4 +1,4 @@
-#include "naive.h"
+#include "singleton.h"
 #include <chrono>
 #include <iostream>
 #include <thread>
@@ -8,18 +8,19 @@
 void ThreadFoo(){
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     Singleton* singleton = Singleton::GetInstance("FOO");
-    std::cout << singleton->value() << "FOO" << std::endl;
+    std::cout << singleton->value() << " in FOO" << std::endl;
 }
 
 void ThreadBar(){
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     Singleton* singleton = Singleton::GetInstance("BAR");
-    std::cout << singleton->value() <<"BAR" <<  std::endl;
+    std::cout << singleton->value() << " in BAR" << std::endl;
 }
 
 int main(){
 
-    // Different thread outputs means that the singleton was reused -> BAD!
+    // Same thread outputs means that the singleton works!
+    // It was reused :D
     
     std::thread t1(ThreadFoo);
     std::thread t2(ThreadBar);
@@ -29,4 +30,3 @@ int main(){
     t2.join();
     return 0;
 }
-
