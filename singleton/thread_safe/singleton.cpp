@@ -1,0 +1,2 @@
+//g
+#include "singleton.h"
