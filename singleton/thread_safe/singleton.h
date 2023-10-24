@@ -1,13 +1,15 @@
-//h
+#ifndef _SINGLETON_H_
+#define _SINGLETON_H_
+
 #include <mutex>
 
 class Singleton{
 
-private:
+protected:
     static Singleton* pinstance_;
     std::mutex mutex_;
 
-protected:
+private:
 
     // Constructor
     Singleton(const std::string value); 
@@ -27,3 +29,5 @@ public:
     void SomeBusinessLogic();
     std::string value();
 };
+
+#endif
