@@ -15,7 +15,7 @@ class ConcreteCreator1 : public Creator {
    * Product* not ConcreteProduct1* !!
    */
  public:
-  Product* FactoryMethod() const; 
+  Product* FactoryMethod() const override; 
 };
 
 #endif

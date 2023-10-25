@@ -12,7 +12,7 @@ class Creator{
 public:
     // Constructor
     virtual ~Creator();
-    virtual Product* FactoryMethod() const;
+    virtual Product* FactoryMethod() const = 0;
 
  /**
    * Also note that, despite its name, the Creator's primary responsibility is
@@ -24,5 +24,4 @@ public:
 
     std::string SomeOperation() const;
 };
-
 #endif
