@@ -1,4 +1,5 @@
 #include "concretestrategya.h"
+#include <algorithm>
 
 std::string ConcreteStrategyA::doAlgorithm(std::string_view data) const{
 

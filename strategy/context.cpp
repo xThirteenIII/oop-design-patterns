@@ -13,7 +13,7 @@ Context::Context(std::unique_ptr<Strategy> &&strategy)
     // n this constructor, we're using std::move(strategy) to initialize strategy_, 
     // which is a move operation, and the compiler may not be able to statically analyze 
     // all possible code paths to ensure strategy_ is always properly initialized.
-    :strategy_(std::move(strategy_)){}
+    :strategy_(std::move(strategy)){}
 
     /**
      * Usually, the Context allows replacing a Strategy object at runtime.

@@ -1,4 +1,5 @@
 #include "concretestrategyb.h" 
+#include <algorithm>
 #include <functional>
 
 

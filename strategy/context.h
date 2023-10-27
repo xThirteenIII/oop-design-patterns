@@ -3,6 +3,7 @@
 
 #include "strategy.h"
 #include <iostream>
+#include <memory>
 
 /**
  * The Context defines the interface of interest to clients.
