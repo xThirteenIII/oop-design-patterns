@@ -10,6 +10,10 @@ ConcreteBuilder1:: ~ConcreteBuilder1(){
     delete product;
 }
 
+void ConcreteBuilder1::Reset(){
+    this->product= new Product1();
+}
+
 /**
   * All production steps work with the same product instance.
   */
@@ -25,3 +29,10 @@ void ConcreteBuilder1::ProducePartB() const{
 void ConcreteBuilder1::ProducePartC() const{
     this->product->parts_.push_back("PartC1");
 }
+
+Product1* ConcreteBuilder1::GetProduct(){
+    Product1* result = this->product;
+    this->Reset();
+    return result;
+}
+

@@ -1,6 +1,7 @@
 #ifndef _PRODUCT1_H_
 #define _PRODUCT1_H_
 #include <vector>
+#include <string>
 /**
  * It makes sense to use the Builder pattern only when your products are quite
  * complex and require extensive configuration.
